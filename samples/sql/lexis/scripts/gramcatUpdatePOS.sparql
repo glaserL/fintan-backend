@@ -1,0 +1,15 @@
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
+PREFIX conll: <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#>
+PREFIX apertium: <http://wiki.apertium.org/wiki/Bidix#>
+
+DELETE { ?entry lexinfo:partOfSpeech ?lexis_tag }
+INSERT { ?entry lexinfo:partOfSpeech ?lexinfo_tag }
+WHERE {
+  ?entry a ontolex:LexicalEntry .
+  ?entry lexinfo:partOfSpeech ?lexis_tag .
+  GRAPH <http://mapping> {
+    ?lexinfo_tag conll:replace ?lexis_tag
+  }
+}

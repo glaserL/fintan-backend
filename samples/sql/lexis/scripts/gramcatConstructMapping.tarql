@@ -1,0 +1,9 @@
+PREFIX conll: <https://github.com/acoli-repo/conll-rdf/blob/master/owl/conll.ttl#>
+
+
+CONSTRUCT {
+  ?map_uri conll:replace ?mapped
+} WHERE {
+  BIND(CONCAT(?GRAMCATEN, ' ', ?GRAMSUBCATEN) as ?mapped)
+  BIND(URI(?map) as ?map_uri)
+}
