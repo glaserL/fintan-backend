@@ -15,10 +15,13 @@
  */
 package org.acoli.fintan.genericIO;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -58,6 +61,20 @@ public class SQLStreamTransformer extends StreamTransformerGenericIO implements 
 	public SQLStreamTransformer buildFromJsonConf(ObjectNode conf) throws IOException, IllegalArgumentException {
 		SQLStreamTransformer transformer = new SQLStreamTransformer();
 		transformer.setConfig(conf);
+		
+		//template for manually loading drivers which are not part of the Fintan package, non-functional at the moment
+		
+//		URLClassLoader child = new URLClassLoader(
+//		        new URL[] {new File("samples/sql/mysql-connector-java-8.0.29.jar").toURI().toURL()},
+//		        this.getClass().getClassLoader()
+//		);
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver", true, child);
+//		} catch (ClassNotFoundException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//			System.exit(1);
+//		}
 		
 		if (conf.hasNonNull("driver")) {
 			try {
