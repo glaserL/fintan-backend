@@ -1,7 +1,9 @@
 
 # Transforming Lexis SQL into OntoLex-Lemon
 
-The pipeline of transforming the Lexis' lexical entries into RDF data using Fintan
+The pipeline of transforming the Lexis' lexical entries into RDF data using Fintan.
+
+This pipeline expects the Lexis DB to be available on a running MySQL database.
 
 ## Authors
 * **Katerina Gkirtzou**
