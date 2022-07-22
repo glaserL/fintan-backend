@@ -28,12 +28,14 @@
 
 	<dependencies>
 
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>2.17.1</version>
 		</dependency>
 		
+		<!-- CPL 1.0 http://www.opensource.org/licenses/cpl1.0.txt, newer releases EPL 1.0 https://opensource.org/licenses/eclipse-1.0.php -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -47,6 +49,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-arq</artifactId>
@@ -59,6 +62,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-cmds</artifactId>
@@ -70,7 +74,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>apache-jena-libs</artifactId>
@@ -84,6 +89,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.acoli.fintan</groupId>
 			<artifactId>fintan-core</artifactId>
@@ -100,6 +106,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Apache 2.0 -->
 		<dependency>
 			<groupId>org.acoli.conll.rdf</groupId>
 			<artifactId>conll-rdf</artifactId>
@@ -120,7 +127,16 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<!-- Apache 2.0 -->
+		<dependency>
+			<groupId>org.acoli.fintan</groupId>
+			<artifactId>fintan-swagger-client</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
 
+		<!-- BSD 2-Clause https://github.com/tarql/tarql/blob/master/LICENSE -->
 		<dependency>
 			<groupId>org.deri.tarql</groupId>
 			<artifactId>tarql</artifactId>
@@ -137,7 +153,7 @@
 			</exclusions>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
+		<!-- MPL 2.0 https://www.mozilla.org/en-US/MPL/2.0/ -->
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
@@ -153,6 +169,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<!-- MIT https://mit-license.org/ -->
 		<dependency>
 			<groupId>eu.liderproject</groupId>
 			<version>0.2-SNAPSHOT</version>
@@ -175,22 +193,174 @@
 			<version>3.6.0</version>
 		</dependency> -->
 		
-		<dependency>
-			<groupId>org.acoli.fintan</groupId>
-			<artifactId>fintan-swagger-client</artifactId>
-			<version>1.0.0</version>
-			<scope>compile</scope>
-		</dependency>
 		
 
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<!-- JDBC Connectors -->
+		<!-- List from https://vladmihalcea.com/jdbc-driver-maven-dependency/ -->
+		
+		<!-- GPL2.0 https://opensource.org/licenses/gpl-2.0.php -->
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.29</version>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- LGPL-2.1 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html -->
+		<dependency>
+    		<groupId>org.mariadb.jdbc</groupId>
+    		<artifactId>mariadb-java-client</artifactId>
+    		<version>RELEASE</version>  
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>             
+		</dependency>
+		
+		<!-- LGPL / BSD 3-clause https://opensource.org/licenses/BSD-3-Clause -->
+		<dependency>
+		    <groupId>org.firebirdsql.jdbc</groupId>
+		    <artifactId>jaybird</artifactId>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
+		<!-- HSQLDB License (based on BSD License) http://hsqldb.org/web/hsqlLicense.html -->
+		<dependency>
+		    <groupId>org.hsqldb</groupId>
+		    <artifactId>hsqldb</artifactId>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		
+		<!-- BSD-2-Clause https://opensource.org/licenses/BSD-2-Clause -->
+		<dependency>
+    		<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
+    		<version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- MIT https://mit-license.org/ -->
+		<dependency>
+    		<groupId>com.microsoft.sqlserver</groupId>
+    		<artifactId>mssql-jdbc</artifactId>
+    		<version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- EPL 1.0 https://opensource.org/licenses/eclipse-1.0.php MPL 2.0 https://www.mozilla.org/en-US/MPL/2.0/ -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- Apache 2.0 -->
+		<dependency>
+		    <groupId>org.apache.derby</groupId>
+		    <artifactId>derby</artifactId>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- FUTC https://www.oracle.com/downloads/licenses/oracle-free-license.html -->
+		<!--
+		<dependency>
+    		<groupId>com.oracle.database.jdbc</groupId>
+    		<artifactId>ojdbc8</artifactId>
+    		<version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		-->
+		
+		<!-- IPLA https://www-40.ibm.com/software/sla/sladb.nsf/lilookup/1024954E51C94B03002587A4003CB520?OpenDocument  -->
+		<!--
+		<dependency>
+  			<groupId>com.ibm.db2</groupId>
+    		<artifactId>jcc</artifactId>
+    		<version>RELEASE</version>  
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>             
+		</dependency>
+		-->
+		
+		<!-- IBM Informix JDBC Software License Agreement http://www-03.ibm.com/software/sla/sladb.nsf/doclookup/CA4476C0AF8346EC852579290012D218?OpenDocument -->
+		<!--
+		<dependency>
+		    <groupId>com.ibm.informix</groupId>
+		    <artifactId>jdbc</artifactId>
+		    <version>RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		-->
+		
+		<!-- SAP-Dev https://tools.hana.ondemand.com/developer-license-3_1.txt -->
+		<!--
+		<dependency>
+    		<groupId>com.sap.cloud.db.jdbc</groupId>
+    		<artifactId>ngdbc</artifactId>
+    		<version>RELEASE</version>  
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>             
+		</dependency>
+		-->
 		
 	</dependencies>
 

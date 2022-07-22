@@ -10,7 +10,7 @@
 	  "driver" : null,
 	  "connectUrl" : "jdbc:mysql://localhost:3306/lexis",
 	  "user" : "root",
-	  "password" : "mysql",
+	  "password" : "<$param0>",
 	  
 	  "query" : "samples/sql/lexis/scripts/exportLexicalEntries.sql",
 	  
