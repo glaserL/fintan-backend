@@ -212,6 +212,7 @@
 		</dependency>
 		
 		<!-- LGPL-2.1 https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html -->
+		<!--
 		<dependency>
     		<groupId>org.mariadb.jdbc</groupId>
     		<artifactId>mariadb-java-client</artifactId>
@@ -223,8 +224,10 @@
 				</exclusion>
 			</exclusions>             
 		</dependency>
+		-->
 		
 		<!-- LGPL / BSD 3-clause https://opensource.org/licenses/BSD-3-Clause -->
+		<!--
 		<dependency>
 		    <groupId>org.firebirdsql.jdbc</groupId>
 		    <artifactId>jaybird</artifactId>
@@ -236,8 +239,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 
 		<!-- HSQLDB License (based on BSD License) http://hsqldb.org/web/hsqlLicense.html -->
+		<!--
 		<dependency>
 		    <groupId>org.hsqldb</groupId>
 		    <artifactId>hsqldb</artifactId>
@@ -249,8 +254,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 		
 		<!-- BSD-2-Clause https://opensource.org/licenses/BSD-2-Clause -->
+		<!--
 		<dependency>
     		<groupId>org.postgresql</groupId>
     		<artifactId>postgresql</artifactId>
@@ -262,8 +269,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 		
 		<!-- MIT https://mit-license.org/ -->
+		<!--
 		<dependency>
     		<groupId>com.microsoft.sqlserver</groupId>
     		<artifactId>mssql-jdbc</artifactId>
@@ -275,8 +284,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 		
 		<!-- EPL 1.0 https://opensource.org/licenses/eclipse-1.0.php MPL 2.0 https://www.mozilla.org/en-US/MPL/2.0/ -->
+		<!--
 		<dependency>
 		    <groupId>com.h2database</groupId>
 		    <artifactId>h2</artifactId>
@@ -288,8 +299,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 		
 		<!-- Apache 2.0 -->
+		<!--
 		<dependency>
 		    <groupId>org.apache.derby</groupId>
 		    <artifactId>derby</artifactId>
@@ -301,6 +314,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 		
 		<!-- FUTC https://www.oracle.com/downloads/licenses/oracle-free-license.html -->
 		<!--
