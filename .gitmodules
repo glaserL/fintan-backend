@@ -1,6 +1,6 @@
 [submodule "fintan-core"]
 	path = fintan-core
-	url = https://github.com/acoli-repo/fintan-core.git
+	url = https://github.com/glaserL/fintan-core.git
 [submodule "conll-rdf"]
 	path = conll-rdf
 	url = https://github.com/acoli-repo/conll-rdf.git
